@@ -638,3 +638,34 @@
     filter:brightness(.96) contrast(1.05) saturate(1.15)!important;
   }
 }
+
+@media(max-width:600px){
+  .login-mosaic{
+    display:grid!important;
+    opacity:1!important;
+    visibility:visible!important;
+    inset:-20vh -220vw -90vh -220vw!important;
+    grid-template-columns:repeat(14, 125px)!important;
+    grid-auto-rows:188px!important;
+    gap:8px!important;
+    transform:perspective(900px) rotateX(5deg) rotateZ(-7deg) scale(1.18)!important;
+  }
+
+  .login-mosaic img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    background:#050505!important;
+    opacity:1!important;
+    filter:brightness(1.05) contrast(1.05) saturate(1.18)!important;
+  }
+
+  .login-mosaic::before{
+    background:rgba(0,0,0,.30)!important;
+  }
+
+  .login-mosaic::after{
+    background:rgba(0,0,0,.18)!important;
+  }
+}
