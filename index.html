@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARIFLIX — Nossa História</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;600;800;900&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <audio id="theme" src="assets/musica.mp3" preload="auto" loop></audio>
+  <div class="grain"></div>
+  <div class="vignette"></div>
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+
+  <section id="login" class="screen login-screen netflix-login">
+    <div class="login-mosaic" aria-hidden="true">
+      <img src="assets/principal-suspeita.png" alt="">
+      <img src="assets/operacao-cabecao.png" alt="">
+      <img src="assets/harry-caso.png" alt="">
+      <img src="assets/crime-organizado.png" alt="">
+      <img src="assets/sem-defesa.png" alt="">
+      <img src="assets/assalto-perfeito.png" alt="">
+      <img src="assets/meu-outro-parzinho.png" alt="">
+      <img src="assets/renovada-para-sempre.png" alt="">
+      <img src="assets/o-futuro.png" alt="">
+      <img src="assets/capa-principal-suspeita.png" alt="">
+      <img src="assets/operacao-cabecao.png" alt="">
+      <img src="assets/crime-organizado.png" alt="">
+      <img src="assets/harry-caso.png" alt="">
+      <img src="assets/sem-defesa.png" alt="">
+      <img src="assets/renovada-para-sempre.png" alt="">
+    </div>
+
+    <header class="login-top">
+      <img class="logo-img login-top-logo" src="assets/mariflix-logo-new.png" alt="MARIFLIX">
+      <button class="login-language">✦ Português ▾</button>
+    </header>
+
+    <div class="login-hero">
+      <h1>Filmes, surtos e momentos nossos, sem limites.</h1>
+      <h2>Custa apenas $um beijasso de cinema,00. Sem chance de cancelamento.</h2>
+      <p>Quer assistir? Escreva seu nome abaixo para acessar o catálogo mais pembão da internet.</p>
+
+      <div class="nick-access">
+        <label for="nickInput">Escreva seu nick para acessar</label>
+        <input id="nickInput" type="text" autocomplete="off" placeholder="digite aqui">
+        <button id="enterBtn" class="primary">Vamos lá ❯</button>
+      </div>
+
+      <div id="loginError" class="login-error hidden">
+        Nome incorreto. Dica: é o lado sombrio da Mariana.
+      </div>
+
+      
+    </div>
+
+    <div class="login-benefits">
+      <div><span>▻</span><strong>Catálogo exclusivo</strong><small>Produções originais baseadas na nossa história.</small></div>
+      <div><span>♡</span><strong>Feito com amor</strong><small>Cada detalhe pensado só para você.</small></div>
+      <div><span>🔒</span><strong>Só pra gente</strong><small>Porque o que é nosso, ninguém mais tem.</small></div>
+    </div>
+  </section>
+
+  <section id="profiles" class="screen profiles hidden">
+    <h2>Quem está assistindo?</h2>
+    <div class="profile-grid">
+      <button class="profile active" data-enter-home><img src="assets/perfil-mariana.jpg" alt="Perfil Mariana"><span>DarkMari</span></button>
+      <button class="profile locked"><div>🔒</div><span>KoallaN</span></button>
+      <button class="profile locked"><div>❤️</div><span>Nós</span></button>
+      <button class="profile locked"><div>✨</div><span>Futuro</span></button>
+    </div>
+    <p class="hint">Somente a mais tchalauzona tem acesso liberado, quem será?</p>
+  </section>
+
+  <main id="app" class="app hidden">
+    <nav class="topbar">
+      <img class="logo-img nav-logo" src="assets/mariflix-logo-new.png" alt="MARIFLIX">
+      <div class="navlinks"><a href="#home">Início</a><a href="#momentos">Filmes</a><a href="#top10">Top 10</a><a href="#segredo">Restrito</a></div>
+    </nav>
+
+    <section id="home" class="hero" style="--hero:url('assets/capa-principal-suspeita.png')">
+      <div class="hero-content">
+        <div class="badge">Série original • 100% baseada em fatos reais</div>
+        <h1>A Principal Suspeita</h1>
+        <p>Uma investigação emocional sobre a pessoa que roubou pensamentos, atenção e um coração inteiro. Estrelando Mariana, Allan e um caso absolutamente sem solução.</p>
+        <div class="actions"><button class="primary" data-open="suspeita">▶ Assistir agora</button><button class="secondary" data-scroll="#segredo">🔒 Conteúdo restrito</button></div>
+        <div class="rating"><span>99% compatível</span><span>Romance</span><span>Comédia</span><span>Crime emocional</span></div>
+      </div>
+    </section>
+
+    <section id="momentos" class="row-section">
+      <h2>Continuar assistindo</h2>
+      <div class="row">
+        <article class="movie-card" data-open="suspeita"><img src="assets/principal-suspeita.png" alt=""><div><h3>A Principal Suspeita</h3><p>Doc. original</p></div></article>
+        <article class="movie-card" data-open="operacao"><img src="assets/operacao-cabecao.png" alt=""><div><h3>Operação: Me Pirou o Cabeção</h3><p>Comédia romântica</p></div></article>
+        <article class="movie-card" data-open="harry"><img src="assets/harry-caso.png" alt=""><div><h3>Harry Potter e o Caso Sem Solução</h3><p>Fantasia & mistério</p></div></article>
+        <article class="movie-card" data-open="crime"><img src="assets/crime-organizado.png" alt=""><div><h3>Crime Organizado</h3><p>Parceiros no crime</p></div></article>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <h2>Filmes baseados em fatos reais</h2>
+      <div class="row tall">
+        <article class="poster" data-open="defesa"><img src="assets/sem-defesa.png" alt=""><h3>Sem Possibilidade de Defesa</h3></article>
+        <article class="poster" data-open="assalto"><img src="assets/assalto-perfeito.png" alt=""><h3>O Assalto Perfeito</h3></article>
+        <article class="poster" data-open="parzinho"><img src="assets/meu-outro-parzinho.png" alt=""><h3>Meu Outro Parzinho</h3></article>
+        <article class="poster" data-open="renovada"><img src="assets/renovada-para-sempre.png" alt=""><h3>Renovada Para Sempre</h3></article>
+        <article class="poster" data-open="futuro"><img src="assets/o-futuro.png" alt=""><h3>O Futuro</h3></article>
+      </div>
+    </section>
+
+    <section id="top10" class="top10 row-section">
+      <h2>Top 10 motivos para amar você</h2>
+      <div class="top-grid">
+        <div><b>10</b><span>Seu sorriso</span></div><div><b>9</b><span>Seu olhar</span></div><div><b>8</b><span>Seu jeito</span></div><div><b>7</b><span>Sua risada</span></div><div><b>6</b><span>Seu abraço</span></div><div><b>5</b><span>Sua presença</span></div><div><b>4</b><span>Seu mundo</span></div><div><b>3</b><span>Nossos momentos</span></div><div><b>2</b><span>Você sendo zé mané</span></div><div class="gold"><b>1</b><span>Você. Sempre você.</span></div>
+      </div>
+    </section>
+
+    <section id="final" class="final">
+      <h2>Próximo lançamento</h2>
+      <div class="future-card" data-open="futuro"><span>EM PRODUÇÃO</span><h3>O Futuro</h3><p>Estrelando Mariana e Allan. Duração prevista: uma vida inteira.</p></div>
+    </section>
+
+    <section id="segredo" class="secret">
+      <div class="secret-box">
+        <div id="secretPhoto" class="secret-photo hidden">
+          <img src="assets/conteudo-restrito-original.jpg" alt="Foto original do casal">
+        </div>
+
+        <div class="secret-copy">
+          <p>Conteúdo restrito</p>
+          <h2>Carta escondida nos arquivos da MARIFLIX</h2>
+
+          <div id="vault">
+            <button class="primary" id="unlockBtn">🔒 Conteúdo Restrito</button>
+
+            <div id="passwordBox" class="hidden">
+              <input
+                type="password"
+                id="secretCode"
+                placeholder="Digite a data da mini tchala"
+                maxlength="8"
+              >
+
+              <button class="primary" id="confirmCode">Desbloquear</button>
+
+              <div id="passwordError" class="password-error hidden">
+                Senha incorreta. Tenta de novo, tchalauzinha.
+              </div>
+            </div>
+          </div>
+
+          <div id="letter" class="letter hidden"></div>
+
+          <div class="letter-actions hidden" id="letterActions">
+            <button class="music-letter" id="letterMusic">🎵 Música para acompanhar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <button id="closeModal" class="close">×</button>
+    <div class="modal-bg"></div>
+    <div class="modal-layout">
+      <img id="modalPoster" class="modal-poster" src="" alt="Pôster do filme">
+      <div class="modal-content">
+        <p class="meta">MARIFLIX Original</p>
+        <h2 id="modalTitle"></h2>
+        <div id="modalTags" class="modal-tags"></div>
+        <p id="modalDesc"></p>
+        <div class="modal-actions"><button class="secondary" id="modalClose2">Voltar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
