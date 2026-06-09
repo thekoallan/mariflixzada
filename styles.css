@@ -1059,3 +1059,84 @@
     font-size:13px;
   }
 }
+
+
+/* ===== FIX DEFINITIVO MOBILE: força os pôsteres aparecerem no celular ===== */
+@media(max-width:700px){
+  .netflix-login{
+    min-height:100svh!important;
+    overflow:hidden!important;
+    background:#000!important;
+  }
+
+  .login-mosaic{
+    position:absolute!important;
+    inset:0!important;
+    z-index:0!important;
+    display:grid!important;
+    visibility:visible!important;
+    opacity:1!important;
+    grid-template-columns:repeat(3, 1fr)!important;
+    grid-auto-rows:33.5vh!important;
+    gap:6px!important;
+    transform:none!important;
+    width:100vw!important;
+    height:100svh!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    filter:none!important;
+  }
+
+  .login-mosaic img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-width:0!important;
+    min-height:0!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    background:#050505!important;
+    opacity:1!important;
+    visibility:visible!important;
+    filter:brightness(.78) contrast(1.08) saturate(1.12)!important;
+    transform:none!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+
+  .login-mosaic img:nth-child(n){
+    transform:none!important;
+  }
+
+  .login-mosaic::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:2!important;
+    background:
+      radial-gradient(circle at center, rgba(0,0,0,.18) 0%, rgba(0,0,0,.46) 48%, rgba(0,0,0,.82) 100%)!important;
+    pointer-events:none!important;
+  }
+
+  .login-mosaic::after{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:3!important;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.52) 0%, rgba(0,0,0,.20) 35%, rgba(0,0,0,.70) 100%),
+      linear-gradient(90deg, rgba(0,0,0,.38) 0%, transparent 28%, transparent 72%, rgba(0,0,0,.38) 100%)!important;
+    pointer-events:none!important;
+  }
+
+  .login-top,
+  .login-hero,
+  .login-benefits{
+    position:relative!important;
+    z-index:10!important;
+  }
+
+  .login-top{
+    position:absolute!important;
+  }
+}
